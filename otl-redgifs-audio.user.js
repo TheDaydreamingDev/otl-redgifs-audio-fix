@@ -14,6 +14,13 @@
 (() => {
   'use strict';
 
+  // Skip mobile browsers to prevent autoplay interruptions.
+  const isMobile =
+    /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+  if (isMobile) return;
+
   const MAX_ATTEMPTS = 100;
   const CHECK_INTERVAL_MS = 200;
   let attempts = 0;
