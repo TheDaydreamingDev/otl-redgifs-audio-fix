@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         OTL RedGIFs Audio Fix
 // @namespace    https://obeythelight.com/
-// @version      1.0.0
-// @description  Automatically unmute RedGIFs embedded videos on desktop.
+// @version      1.0.1
+// @description  Automatically unmute RedGIFs videos on supported browsers.
 // @author       Obey The Light
 // @match        https://www.redgifs.com/ifr/*
 // @run-at       document-idle
@@ -14,12 +14,12 @@
 (() => {
   'use strict';
 
-  // Skip mobile browsers to prevent autoplay interruptions.
-  const isMobile =
-    /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+  // Skip iOS to prevent autoplay interruptions.
+  const isIOS =
+    /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
-  if (isMobile) return;
+  if (isIOS) return;
 
   const MAX_ATTEMPTS = 100;
   const CHECK_INTERVAL_MS = 200;
