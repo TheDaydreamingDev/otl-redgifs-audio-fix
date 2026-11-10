@@ -12,13 +12,14 @@ This userscript runs inside the embedded RedGIFs player and automatically activa
 
 ### 1. Install a userscript manager
 
-Choose a userscript manager for your **desktop browser**:
+Choose a userscript manager for a **supported browser**:
 
-- **Chrome, Brave, and other Chromium browsers:** [Tampermonkey](https://www.tampermonkey.net/)
+- **Chrome and Brave (desktop):** [Tampermonkey](https://www.tampermonkey.net/)
 - **Firefox (desktop):** [Violentmonkey](https://violentmonkey.github.io/)
 - **Safari (macOS):** [Userscripts](https://github.com/quoid/userscripts)
+- **Firefox for Android:** [Tampermonkey](https://addons.mozilla.org/en-US/android/addon/tampermonkey/)
 
-**Mobile browsers are not supported.** Do not install this script expecting automatic sound on iPhone, iPad, or Android.
+**iPhone and iPad are not supported.** Other Android browser configurations have not been verified.
 
 ### 2. Install OTL RedGIFs Audio Fix
 
@@ -65,26 +66,25 @@ Verify that the script continues working after restricting permissions.
 
 ## Compatibility
 
-**Desktop browsers only.** OTL RedGIFs Audio Fix automatically skips mobile browsers to prevent playback interruptions.
+**Verified working:**
+- Google Chrome on desktop with Tampermonkey.
+- Mozilla Firefox on desktop with Violentmonkey.
+- Brave on desktop with Tampermonkey.
+- Safari on macOS with Userscripts.
+- Firefox for Android with Tampermonkey, tested on a Samsung Galaxy device.
 
-**Verified:**
-- Google Chrome on desktop.
-- Automatic unmuting when RedGIFs clips change.
-- Correct synchronization of the RedGIFs speaker icon.
+All five configurations have been tested with automatic RedGIFs unmuting and clip transitions.
+
+**Unsupported:**
+- iPhone and iPad (iOS/iPadOS). Automatic unmuting interrupts video playback. The script disables itself on iOS to prevent freezing.
 
 **Not yet verified:**
-- Firefox, Brave, and other desktop browsers.
-- Safari on macOS.
+- Other Android browsers.
+- Other desktop browser and extension combinations.
 
-**Mobile browsers (iOS and Android): Not supported.**
+Chrome for Android does not natively support userscript extensions.
 
-Automatic unmuting caused playback to freeze during testing on iPhone Safari. The script therefore disables automatic unmuting on mobile devices so videos can continue playing normally, although they remain muted.
-
-Android has not been tested.
-
-Browser autoplay restrictions may still prevent automatic audio playback on some desktop browsers.
-
-Future updates to the RedGIFs player may affect compatibility.
+Browser autoplay restrictions and future RedGIFs player changes may affect compatibility.
 
 ## Updates
 
