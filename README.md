@@ -1,7 +1,6 @@
-
 # OTL RedGIFs Audio Fix
 
-An official, free, open-source userscript for [Obey The Light](https://obeythelight.com) that automatically unmutes embedded RedGIFs videos.
+An official, free, open-source desktop userscript for [Obey The Light](https://obeythelight.com) that automatically unmutes embedded RedGIFs videos.
 
 ## Why is this needed?
 
