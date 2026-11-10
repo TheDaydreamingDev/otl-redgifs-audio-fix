@@ -13,11 +13,13 @@ This userscript runs inside the embedded RedGIFs player and automatically activa
 
 ### 1. Install a userscript manager
 
-Choose a compatible manager for your browser:
+Choose a userscript manager for your **desktop browser**:
 
 - **Chrome, Brave, and other Chromium browsers:** [Tampermonkey](https://www.tampermonkey.net/)
-- **Firefox (desktop and Android):** [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
-- **Safari (macOS, iPhone, and iPad):** [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887)
+- **Firefox (desktop):** [Violentmonkey](https://violentmonkey.github.io/)
+- **Safari (macOS):** [Userscripts](https://github.com/quoid/userscripts)
+
+**Mobile browsers are not supported.** Do not install this script expecting automatic sound on iPhone, iPad, or Android.
 
 ### 2. Install OTL RedGIFs Audio Fix
 
@@ -64,18 +66,26 @@ Verify that the script continues working after restricting permissions.
 
 ## Compatibility
 
-**Tested:**
-- Desktop Chrome with OTL.
-- Automatic unmuting during RedGIFs clip transitions.
-- Correct synchronization of the speaker icon.
+**Desktop browsers only.** OTL RedGIFs Audio Fix automatically skips mobile browsers to prevent playback interruptions.
+
+**Verified:**
+- Google Chrome on desktop.
+- Automatic unmuting when RedGIFs clips change.
+- Correct synchronization of the RedGIFs speaker icon.
 
 **Not yet verified:**
-- Other desktop browsers.
-- Android and iOS browsers.
+- Firefox, Brave, and other desktop browsers.
+- Safari on macOS.
 
-Browser autoplay restrictions may still prevent audio from starting automatically, even with the script installed.
+**Mobile browsers (iOS and Android): Not supported.**
 
-Because this script interacts with RedGIFs' player controls, future RedGIFs updates may affect compatibility.
+Automatic unmuting caused playback to freeze during testing on iPhone Safari. The script therefore disables automatic unmuting on mobile devices so videos can continue playing normally, although they remain muted.
+
+Android has not been tested.
+
+Browser autoplay restrictions may still prevent automatic audio playback on some desktop browsers.
+
+Future updates to the RedGIFs player may affect compatibility.
 
 ## Updates
 
