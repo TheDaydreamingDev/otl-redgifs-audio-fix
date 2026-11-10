@@ -2,7 +2,7 @@
 // @name         OTL RedGIFs Audio Fix
 // @namespace    https://obeythelight.com/
 // @version      1.0.0
-// @description  Automatically unmute RedGIFs embedded videos.
+// @description  Automatically unmute RedGIFs embedded videos on desktop.
 // @author       Obey The Light
 // @match        https://www.redgifs.com/ifr/*
 // @run-at       document-idle
