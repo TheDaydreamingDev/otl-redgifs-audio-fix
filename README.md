@@ -6,7 +6,7 @@ An official, free, open-source userscript for [Obey The Light](https://obeytheli
 
 OTL uses RedGIFs' embedded video player to stream clips directly from RedGIFs. These players typically start muted, and OTL cannot directly override their internal settings due to browser security restrictions.
 
-This userscript runs inside the embedded RedGIFs player and automatically activates its native sound button. This enables audio while keeping the speaker icon synchronized.
+This userscript runs inside the embedded RedGIFs player, waits for playback to begin advancing, and then activates its native sound button. This keeps the speaker icon synchronized. If the browser pauses the video after unmuting, the script attempts to resume playback muted rather than leave the video frozen.
 
 ## Installation
 
@@ -23,7 +23,7 @@ Choose a userscript manager for a **supported browser**:
 
 ### 2. Install OTL RedGIFs Audio Fix
 
-Once the official installation URL is available, visit:
+Visit the official installation URL:
 
 https://obeythelight.com/scripts/otl-redgifs-audio.user.js
 
@@ -37,7 +37,7 @@ Chrome users may need to enable **Allow User Scripts** under Tampermonkey's exte
 
 Open [Obey The Light](https://obeythelight.com) and start a session using the online Media Library.
 
-RedGIFs videos should now automatically unmute as they load, including when OTL switches between clips.
+RedGIFs videos should now automatically unmute after playback begins, including when OTL switches between clips. If browser autoplay restrictions pause a video when sound is enabled, the script attempts to resume that clip muted.
 
 ## Privacy & Security
 
@@ -73,7 +73,7 @@ Verify that the script continues working after restricting permissions.
 - Safari on macOS with Userscripts.
 - Firefox for Android with Tampermonkey, tested on a Samsung Galaxy device.
 
-All five configurations have been tested with automatic RedGIFs unmuting and clip transitions.
+All five configurations have been tested with automatic RedGIFs unmuting and clip transitions. Version 1.0.2 introduces playback-aware unmuting and a muted-playback recovery fallback, tested on desktop Chrome. Other previously verified configurations should be checked again when upgrading.
 
 **Unsupported:**
 - iPhone and iPad (iOS/iPadOS). Automatic unmuting interrupts video playback. The script disables itself on iOS to prevent freezing.
